@@ -9,10 +9,10 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #FDF5E6; /* Un color 'Lino Viejo' o 'Eggshell', muy de pastelería */
-            color: #6B4F4B; /* Un marrón más suave para el texto principal */
+            background-color: #FDF5E6; 
+            color: #6B4F4B; 
         }
-        .font-script { /* Una fuente script más elegante para ciertos acentos */
+        .font-script { 
             font-family: 'Parisienne', cursive;
         }
         .font-heading {
@@ -20,11 +20,11 @@
         }
         .donut-card {
             background-color: #FFFFFF;
-            border-radius: 1.25rem; /* Un poco más redondeado */
+            border-radius: 1.25rem; 
             box-shadow: 0 10px 20px -5px rgba(107, 79, 75, 0.2), 0 6px 10px -3px rgba(107, 79, 75, 0.15);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            border: 1px solid #F5E1CB; /* Borde color galleta claro */
-            overflow: hidden; /* Para que la imagen no se salga del borde redondeado */
+            border: 1px solid #F5E1CB; 
+            overflow: hidden; 
         }
         .donut-card:hover {
             transform: translateY(-8px) scale(1.02);
@@ -36,56 +36,77 @@
         .donut-card:hover img {
             transform: scale(1.05);
         }
-        .btn-primary {
-            background-color: #E57373; /* Un rosa-coral suave */
-            color: white;
-            font-weight: 700; /* Un poco más de peso */
+        .btn { 
+            font-weight: 700;
             padding: 0.9rem 2rem;
             border-radius: 0.75rem;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 10px rgba(229, 115, 115, 0.3);
             letter-spacing: 0.5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: #E57373; 
+            color: white;
+            box-shadow: 0 5px 10px rgba(229, 115, 115, 0.3);
         }
         .btn-primary:hover {
-            background-color: #EF5350; /* Rosa-coral más intenso */
+            background-color: #EF5350; 
             transform: translateY(-3px);
             box-shadow: 0 8px 15px rgba(239, 83, 80, 0.35);
         }
         .btn-primary:disabled {
-            background-color: #FFCDD2; /* Rosa muy pálido */
+            background-color: #FFCDD2; 
             box-shadow: none;
             cursor: not-allowed;
             opacity: 0.6;
         }
         .btn-secondary {
-            background-color: #A5D6A7; /* Verde menta pastel */
-            color: #388E3C; /* Verde oscuro para contraste */
-            font-weight: 700;
-            padding: 0.9rem 2rem;
-            border-radius: 0.75rem;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            background-color: #A5D6A7; 
+            color: #388E3C; 
             box-shadow: 0 5px 10px rgba(165, 214, 167, 0.4);
         }
         .btn-secondary:hover {
-            background-color: #81C784; /* Verde menta más intenso */
+            background-color: #81C784; 
             color: white;
             transform: translateY(-3px);
             box-shadow: 0 8px 15px rgba(129, 199, 132, 0.45);
         }
          .btn-secondary:disabled {
-            background-color: #C8E6C9; /* Verde muy pálido */
+            background-color: #C8E6C9; 
             color: #A5D6A7;
             box-shadow: none;
             cursor: not-allowed;
             opacity: 0.6;
         }
-        .btn-cancel {
-            background-color: #F0F0F0; /* Gris muy claro */
-            color: #757575; /* Gris medio */
+        .btn-accent { 
+            background-color: #FFB74D; 
+            color: #A1887F; 
+            box-shadow: 0 5px 10px rgba(255, 183, 77, 0.3);
+        }
+        .btn-accent:hover {
+            background-color: #FFA726; 
+            color: #795548;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(255, 167, 38, 0.35);
+        }
+        .btn-location {
+            background-color: #81D4FA; /* Azul claro para ubicación */
+            color: #01579B; /* Azul oscuro */
+            padding: 0.5rem 1rem; /* Más pequeño */
             font-weight: 600;
-            padding: 0.9rem 2rem;
-            border-radius: 0.75rem;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 3px 6px rgba(129, 212, 250, 0.4);
+        }
+        .btn-location:hover {
+            background-color: #4FC3F7;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(79, 195, 247, 0.5);
+        }
+        .btn-cancel {
+            background-color: #F0F0F0; 
+            color: #757575; 
+            font-weight: 600; 
              box-shadow: 0 4px 6px rgba(0,0,0,0.08);
         }
         .btn-cancel:hover {
@@ -95,13 +116,13 @@
             box-shadow: 0 6px 10px rgba(0,0,0,0.1);
         }
         .modal {
-            background-color: rgba(79, 53, 45, 0.6); /* Fondo del modal un poco más oscuro y cálido */
+            background-color: rgba(79, 53, 45, 0.6); 
         }
         .modal-content {
-            animation: fadeInScale 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Animación más suave */
-            background-color: #FFFBF2; /* Fondo del modal crema muy claro */
+            animation: fadeInScale 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+            background-color: #FFFBF2; 
             border-radius: 1.25rem;
-            border: 2px solid #E57373; /* Borde con color primario */
+            border: 2px solid #E57373; 
         }
         @keyframes fadeInScale {
             from { opacity: 0; transform: translateY(20px) scale(0.95); }
@@ -110,48 +131,87 @@
         .quantity-input {
             width: 5rem;
             text-align: center;
-            border: 2px solid #FFB74D; /* Borde naranja más vibrante */
+            border: 2px solid #FFB74D; 
             border-radius: 0.5rem;
-            color: #D84315; /* Texto naranja oscuro intenso */
+            color: #D84315; 
             font-weight: 700;
             padding: 0.5rem;
         }
         .stock-info {
-            background-color: #FFCC80; /* Naranja pastel más claro */
-            color: #A1887F; /* Marrón grisáceo */
+            background-color: #FFCC80; 
+            color: #A1887F; 
             padding: 0.6rem 1.2rem;
-            border-radius: 2rem; /* Más redondeado, como una etiqueta */
+            border-radius: 2rem; 
             font-weight: 600;
             display: inline-block;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .shipping-info {
-            background-color: #E1F5FE; /* Azul cielo muy pálido */
-            color: #0277BD; /* Azul oscuro */
+            background-color: #E1F5FE; 
+            color: #0277BD; 
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem;
             font-weight: 600;
             display: inline-block;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            border: 1px dashed #4FC3F7; /* Borde punteado azul claro */
+            border: 1px dashed #4FC3F7; 
         }
         .brand-accent {
-            color: #E57373; /* Color primario para acentos */
+            color: #E57373; 
         }
         .price-tag {
-            color: #4CAF50; /* Verde brillante para precios */
+            color: #4CAF50; 
             font-weight: 700;
         }
         .donut-title {
              font-family: 'Satisfy', cursive;
-             color: #D81B60; /* Un rosa más intenso para títulos de donas */
+             color: #D81B60; 
         }
+        .donut-personality-button {
+            background: none;
+            border: none;
+            padding: 0.25rem;
+            margin-left: 0.5rem;
+            cursor: pointer;
+            color: #FFB74D; 
+            display: inline-flex;
+            align-items: center;
+        }
+        .donut-personality-button:hover {
+            color: #FFA726; 
+        }
+        .donut-personality-button svg {
+            width: 1.25em; 
+            height: 1.25em;
+        }
+        .loading-spinner {
+            border: 4px solid #f3f3f3; 
+            border-top: 4px solid #E57373; 
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #location-status {
+            font-size: 0.875rem; /* text-sm */
+            margin-top: 0.5rem; /* mt-2 */
+            min-height: 1.25rem; /* Asegurar espacio para el mensaje */
+        }
+        .location-success { color: #4CAF50; /* Verde */ }
+        .location-error { color: #F44336; /* Rojo */ }
+        .location-info { color: #2196F3; /* Azul */ }
     </style>
 </head>
 <body class="antialiased">
     <div class="container mx-auto p-4 md:p-8 max-w-5xl">
 
-        <header class="text-center mb-20"> <h1 class="font-script text-6xl md:text-7xl font-bold text-pink-600 mb-4">Dulces Antojos</h1>
+        <header class="text-center mb-12"> 
+            <h1 class="font-script text-6xl md:text-7xl font-bold text-pink-600 mb-4">Dulces Antojos</h1>
             <p class="text-2xl text-orange-700 mb-5">¡Donas <span class="font-heading text-3xl brand-accent">recién hechas</span> con amor, directo a tu paladar!</p>
             <p class="text-lg text-gray-700">
                 Horario de Pedidos: <span class="font-semibold brand-accent">Domingos desde las 8:00 AM</span>
@@ -165,11 +225,23 @@
             </p>
         </header>
 
+        <div class="text-center mb-12">
+            <button id="show-suggestion-button" class="btn btn-accent text-lg px-8 py-3" onclick="getDonutSuggestion()">
+                ✨ ¿Antojo indeciso? ¡Recibe una sugerencia! ✨
+            </button>
+        </div>
+
         <section id="menu-donas" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-10 gap-y-12 mb-20">
-            <div class="donut-card p-0 flex flex-col"> <img src="https://i.postimg.cc/6qRXypPc/dona-blanca.jpg" alt="Dona de Chocolate Blanco Celestial" class="w-full h-64 object-cover">
+            <div class="donut-card p-0 flex flex-col"> 
+                <img src="https://i.postimg.cc/6qRXypPc/dona-blanca.jpg" alt="Dona de Chocolate Blanco Celestial" class="w-full h-64 object-cover">
                 <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="text-4xl donut-title mb-3">Chocolate Blanco Celestial</h2>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">
+                    <div class="flex items-center mb-3">
+                        <h2 class="text-4xl donut-title">Chocolate Blanco Celestial</h2>
+                        <button class="donut-personality-button" title="Descubre su personalidad" onclick="getDonutPersonality('Chocolate Blanco Celestial', 'Flota en una nube de ensueño con nuestra creación de chocolate blanco. Una masa etérea, besada por una cascada de cremoso chocolate blanco belga y coronada con perlas de azúcar iridiscentes. Cada mordisco es un susurro dulce, una fantasía hecha dona.')">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/></svg>
+                        </button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow" data-description="Flota en una nube de ensueño con nuestra creación de chocolate blanco. Una masa etérea, besada por una cascada de cremoso chocolate blanco belga y coronada con perlas de azúcar iridiscentes. Cada mordisco es un susurro dulce, una fantasía hecha dona.">
                         Flota en una nube de ensueño con nuestra creación de chocolate blanco. Una masa etérea, besada por una cascada de cremoso chocolate blanco belga y coronada con perlas de azúcar iridiscentes. Cada mordisco es un susurro dulce, una fantasía hecha dona.
                     </p>
                     <div class="flex justify-between items-center mt-auto pt-4 border-t border-orange-100">
@@ -182,8 +254,13 @@
             <div class="donut-card p-0 flex flex-col">
                 <img src="https://i.postimg.cc/cCcF9qtZ/dona-chocolate.jpg" alt="Dona Abrazo de Chocolate Oscuro" class="w-full h-64 object-cover">
                  <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="text-4xl donut-title mb-3">Abrazo de Chocolate Oscuro</h2>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">
+                    <div class="flex items-center mb-3">
+                        <h2 class="text-4xl donut-title">Abrazo de Chocolate Oscuro</h2>
+                        <button class="donut-personality-button" title="Descubre su personalidad" onclick="getDonutPersonality('Abrazo de Chocolate Oscuro', 'Para los paladares audaces, un intenso abrazo de cacao. Nuestra dona de chocolate oscuro es un poema de sabores profundos. Masa de chocolate rica, sumergida en una ganache brillante de chocolate amargo (72% cacao) y salpicada con trocitos de avellana tostada. Pura tentación.')">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/></svg>
+                        </button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow" data-description="Para los paladares audaces, un intenso abrazo de cacao. Nuestra dona de chocolate oscuro es un poema de sabores profundos. Masa de chocolate rica, sumergida en una ganache brillante de chocolate amargo (72% cacao) y salpicada con trocitos de avellana tostada. Pura tentación.">
                         Para los paladares audaces, un intenso abrazo de cacao. Nuestra dona de chocolate oscuro es un poema de sabores profundos. Masa de chocolate rica, sumergida en una ganache brillante de chocolate amargo (72% cacao) y salpicada con trocitos de avellana tostada. Pura tentación.
                     </p>
                     <div class="flex justify-between items-center mt-auto pt-4 border-t border-orange-100">
@@ -196,8 +273,13 @@
             <div class="donut-card p-0 flex flex-col">
                 <img src="https://i.postimg.cc/T2Qj4JHR/dona-azucarada.jpg" alt="Dona Suspiro Azucarado Clásico" class="w-full h-64 object-cover">
                 <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="text-4xl donut-title mb-3">Suspiro Azucarado Clásico</h2>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">
+                     <div class="flex items-center mb-3">
+                        <h2 class="text-4xl donut-title">Suspiro Azucarado Clásico</h2>
+                        <button class="donut-personality-button" title="Descubre su personalidad" onclick="getDonutPersonality('Suspiro Azucarado Clásico', 'La belleza de lo simple, un suspiro de felicidad. Nuestra dona azucarada es un homenaje a la tradición: una masa dorada y esponjosa como una nube, delicadamente rebozada en una lluvia de azúcar fina que brilla como diamantes. Un clásico que acaricia el alma.')">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/></svg>
+                        </button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow" data-description="La belleza de lo simple, un suspiro de felicidad. Nuestra dona azucarada es un homenaje a la tradición: una masa dorada y esponjosa como una nube, delicadamente rebozada en una lluvia de azúcar fina que brilla como diamantes. Un clásico que acaricia el alma.">
                         La belleza de lo simple, un suspiro de felicidad. Nuestra dona azucarada es un homenaje a la tradición: una masa dorada y esponjosa como una nube, delicadamente rebozada en una lluvia de azúcar fina que brilla como diamantes. Un clásico que acaricia el alma.
                     </p>
                     <div class="flex justify-between items-center mt-auto pt-4 border-t border-orange-100">
@@ -210,8 +292,13 @@
             <div class="donut-card p-0 flex flex-col">
                 <img src="https://i.postimg.cc/Y9MgXv6G/dona-rellena.jpg" alt="Dona Corazón de Crema Soñadora" class="w-full h-64 object-cover">
                 <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="text-4xl donut-title mb-3">Corazón de Crema Soñadora</h2>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">
+                    <div class="flex items-center mb-3">
+                        <h2 class="text-4xl donut-title">Corazón de Crema Soñadora</h2>
+                        <button class="donut-personality-button" title="Descubre su personalidad" onclick="getDonutPersonality('Corazón de Crema Soñadora', 'Un secreto dulce espera en su interior. Muerde nuestra suave dona y descubre un corazón rebosante de crema pastelera artesanal, infusionada con vainilla de Papantla y un toque de limón. Cubierta con un velo de azúcar glas, es un sueño hecho bocado.')">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/></svg>
+                        </button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow" data-description="Un secreto dulce espera en su interior. Muerde nuestra suave dona y descubre un corazón rebosante de crema pastelera artesanal, infusionada con vainilla de Papantla y un toque de limón. Cubierta con un velo de azúcar glas, es un sueño hecho bocado.">
                         Un secreto dulce espera en su interior. Muerde nuestra suave dona y descubre un corazón rebosante de crema pastelera artesanal, infusionada con vainilla de Papantla y un toque de limón. Cubierta con un velo de azúcar glas, es un sueño hecho bocado.
                     </p>
                     <div class="flex justify-between items-center mt-auto pt-4 border-t border-orange-100">
@@ -223,7 +310,7 @@
         </section>
 
         <div class="text-center mb-20">
-            <button id="order-button" class="btn-primary text-xl px-12 py-5 disabled:opacity-50 disabled:cursor-not-allowed" onclick="showOrderModal()" disabled>
+            <button id="order-button" class="btn btn-primary text-xl px-12 py-5 disabled:opacity-50 disabled:cursor-not-allowed" onclick="showOrderModal()" disabled>
                 Revisar y Confirmar Pedido
             </button>
         </div>
@@ -237,34 +324,98 @@
                     </div>
                 <p class="text-3xl font-semibold text-gray-800 mb-8 text-right">Total: <span id="total-price" class="price-tag"></span></p>
 
-                <div class="mb-6">
-                    <label for="address" class="block text-lg font-medium text-orange-700 mb-2">Tu dirección para el envío mágico:</label>
+                <div class="mb-1"> <label for="address" class="block text-lg font-medium text-orange-700 mb-2">Tu dirección para el envío mágico:</label>
                     <input type="text" id="address" name="address" class="w-full p-3 border-2 border-orange-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-md" placeholder="Ej: Calle Dulzura 123, Col. Ensueño" oninput="updateWhatsappButtonState()">
-                    <p id="address-error" class="text-red-600 text-sm mt-1 hidden">Por favor, indícanos dónde entregar esta delicia.</p>
+                </div>
+                <div class="mb-4 text-center sm:text-left"> <button id="get-location-button" class="btn btn-location text-sm mt-2" onclick="getUserLocation()">
+                        📍 Usar mi ubicación actual
+                    </button>
+                    <div id="location-status" class="mt-2 text-sm"></div>
                 </div>
                 
+                <p id="address-error" class="text-red-600 text-sm -mt-2 mb-4 hidden">Por favor, indícanos dónde entregar esta delicia.</p>
+
+
                 <div class="flex flex-col sm:flex-row gap-4 mt-10">
-                    <button id="whatsapp-button" class="btn-secondary w-full sm:w-auto flex-grow text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center" onclick="sendWhatsAppMessage()" disabled>
+                    <button id="whatsapp-button" class="btn btn-secondary w-full sm:w-auto flex-grow text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center" onclick="sendWhatsAppMessage()" disabled>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 inline mr-2 -mt-1">
                             <path d="M16.668 14.9195C16.4232 15.4342 15.3592 15.989 14.8444 16.1295C14.3296 16.27 13.6804 16.3305 13.2516 16.19C12.8228 16.0495 12.2436 15.8185 11.604 15.4342C10.1492 14.5435 9.0248 13.2005 8.0012 11.7155C7.2084 10.591 6.7104 9.729 6.7708 9.04975C6.8312 8.3705 7.26 7.96075 7.5048 7.716C7.7496 7.47125 8.0244 7.391 8.2692 7.03675C8.514 6.6825 8.5744 6.512 8.484 6.311C8.3936 6.11 8.1788 5.5855 7.9944 5.14075C7.81 4.696 7.6256 4.72625 7.4108 4.72625C7.196 4.72625 6.9512 4.72625 6.7064 4.72625C6.4616 4.72625 6.0928 4.81675 5.7844 5.29175C5.476 5.76675 4.786 6.446 4.786 7.64825C4.786 8.8505 5.81 10.0025 5.9608 10.217C6.1116 10.4315 7.4712 12.6095 9.6792 13.5305C11.5564 14.3022 11.8916 14.5121 12.4968 14.7873C13.102 15.0625 13.6168 15.0322 13.942 14.9717C14.3268 14.9112 15.2908 14.3262 15.5056 13.8115C15.7204 13.2967 15.7204 12.868 15.63 12.707C15.5396 12.546 15.2948 12.4555 15.02 12.2245C14.7452 11.9935 14.2604 11.7925 14.076 11.5172C13.8916 11.242 13.8616 11.011 14.046 10.7965C14.2304 10.582 14.6452 10.1372 15.02 9.783C15.3948 9.42875 15.6396 9.55925 15.8544 9.77375C16.0692 9.98825 16.1296 10.3122 16.22 10.4728C16.3104 10.6332 16.668 11.128 16.8228 11.3425C16.9776 11.557 17.068 11.6777 17.1884 11.6172C17.3088 11.5568 17.7032 11.3425 17.8276 11.037C17.952 10.7315 18.1068 10.4562 18.1672 10.2418C18.2276 10.0272 18.1976 9.84275 18.0772 9.69225C17.9568 9.54175 17.532 9.127 16.668 14.9195Z" />
                         </svg>
                         Enviar Pedido por WhatsApp
                     </button>
-                    <button class="btn-cancel w-full sm:w-auto text-lg" onclick="closeOrderModal()">Quizás Luego</button>
+                    <button class="btn btn-cancel w-full sm:w-auto text-lg" onclick="closeOrderModal()">Quizás Luego</button>
                 </div>
             </div>
         </div>
+
+        <div id="suggestion-modal" class="fixed inset-0 modal items-center justify-center hidden z-50 p-4">
+            <div class="modal-content p-7 md:p-10 shadow-2xl max-w-lg w-full mx-auto">
+                <h3 class="font-heading text-4xl text-pink-500 mb-6 text-center">✨ ¡Sugerencia Especial para Ti! ✨</h3>
+                <div id="suggestion-loading" class="loading-spinner hidden"></div>
+                <div id="suggestion-content" class="text-gray-700 text-lg">
+                    </div>
+                <div id="suggestion-error" class="text-red-600 text-center hidden mt-4">
+                    <p>¡Ups! No pudimos obtener una sugerencia en este momento. Intenta de nuevo más tarde.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                    <button id="add-suggestion-button" class="btn btn-secondary w-full sm:w-auto flex-grow text-lg hidden">
+                        Añadir Sugerencia al Pedido
+                    </button>
+                    <button class="btn btn-cancel w-full sm:w-auto" onclick="closeSuggestionModal()">Cerrar</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="donut-personality-modal" class="fixed inset-0 modal items-center justify-center hidden z-[51] p-4"> 
+            <div class="modal-content p-7 md:p-10 shadow-2xl max-w-md w-full mx-auto">
+                <h3 id="donut-personality-title" class="font-heading text-4xl text-pink-500 mb-6 text-center">Personalidad de la Dona</h3>
+                <div id="donut-personality-loading" class="loading-spinner hidden"></div>
+                <div id="donut-personality-content" class="text-gray-700 text-lg text-center">
+                    </div>
+                <div id="donut-personality-error" class="text-red-600 text-center hidden mt-4">
+                    <p>¡Oh no! No pudimos descubrir la personalidad de esta dona ahora. Intenta con otra o más tarde.</p>
+                </div>
+                <div class="flex justify-center mt-8">
+                    <button class="btn btn-cancel w-full sm:w-auto" onclick="closeDonutPersonalityModal()">Entendido</button>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
     <script>
         const WHATSAPP_NUMBER = "5219841798050"; 
-        const SHIPPING_COST = 50; // Costo de envío en MXN
-        const FREE_SHIPPING_THRESHOLD = 10; // Cantidad de donas para envío gratis (10 o más)
+        const SHIPPING_COST = 50; 
+        const FREE_SHIPPING_THRESHOLD = 10; 
 
         const orderButton = document.getElementById('order-button');
         const whatsappButton = document.getElementById('whatsapp-button');
         const addressInput = document.getElementById('address');
         const addressError = document.getElementById('address-error');
+        const locationStatus = document.getElementById('location-status');
+
+
+        const suggestionModal = document.getElementById('suggestion-modal');
+        const suggestionLoading = document.getElementById('suggestion-loading');
+        const suggestionContent = document.getElementById('suggestion-content');
+        const suggestionError = document.getElementById('suggestion-error');
+        const addSuggestionButton = document.getElementById('add-suggestion-button');
+        let currentSuggestion = null; 
+
+        const donutPersonalityModal = document.getElementById('donut-personality-modal');
+        const donutPersonalityTitle = document.getElementById('donut-personality-title');
+        const donutPersonalityLoading = document.getElementById('donut-personality-loading');
+        const donutPersonalityContent = document.getElementById('donut-personality-content');
+        const donutPersonalityError = document.getElementById('donut-personality-error');
+
+
+        const availableDonuts = [
+            { id: 'qty-blanco', name: 'Chocolate Blanco Celestial', price: 20, description: 'Flota en una nube de ensueño con nuestra creación de chocolate blanco. Una masa etérea, besada por una cascada de cremoso chocolate blanco belga y coronada con perlas de azúcar iridiscentes. Cada mordisco es un susurro dulce, una fantasía hecha dona.' },
+            { id: 'qty-negro', name: 'Abrazo de Chocolate Oscuro', price: 20, description: 'Para los paladares audaces, un intenso abrazo de cacao. Nuestra dona de chocolate oscuro es un poema de sabores profundos. Masa de chocolate rica, sumergida en una ganache brillante de chocolate amargo (72% cacao) y salpicada con trocitos de avellana tostada. Pura tentación.' },
+            { id: 'qty-azucar', name: 'Suspiro Azucarado Clásico', price: 15, description: 'La belleza de lo simple, un suspiro de felicidad. Nuestra dona azucarada es un homenaje a la tradición: una masa dorada y esponjosa como una nube, delicadamente rebozada en una lluvia de azúcar fina que brilla como diamantes. Un clásico que acaricia el alma.' },
+            { id: 'qty-rellena', name: 'Corazón de Crema Soñadora', price: 20, description: 'Un secreto dulce espera en su interior. Muerde nuestra suave dona y descubre un corazón rebosante de crema pastelera artesanal, infusionada con vainilla de Papantla y un toque de limón. Cubierta con un velo de azúcar glas, es un sueño hecho bocado.' }
+        ];
 
         function updateOrderButtonState() {
             const inputs = document.querySelectorAll('#menu-donas input[type="number"]');
@@ -283,8 +434,56 @@
             whatsappButton.disabled = addressValue === '';
             if (addressValue !== '') {
                 addressError.classList.add('hidden');
+            } else {
+                // Solo mostrar el error si el botón estaba previamente habilitado o si se intenta enviar.
+                // No mostrarlo solo por estar vacío al inicio.
             }
         }
+        
+        function getUserLocation() {
+            if (!navigator.geolocation) {
+                locationStatus.textContent = 'Geolocalización no es soportada por tu navegador.';
+                locationStatus.className = 'location-error';
+                return;
+            }
+
+            locationStatus.textContent = 'Obteniendo ubicación...';
+            locationStatus.className = 'location-info';
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    const mapsLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
+                    
+                    addressInput.value = `Ubicación GPS: Lat: ${latitude.toFixed(5)}, Lon: ${longitude.toFixed(5)}. Ver en mapa: ${mapsLink}`;
+                    locationStatus.textContent = '¡Ubicación obtenida y añadida a la dirección!';
+                    locationStatus.className = 'location-success';
+                    updateWhatsappButtonState(); // Habilitar botón de WhatsApp si la dirección ahora tiene contenido
+                },
+                (error) => {
+                    let message = 'No se pudo obtener la ubicación. ';
+                    switch(error.code) {
+                        case error.PERMISSION_DENIED:
+                            message += "Permiso denegado.";
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            message += "Información de ubicación no disponible.";
+                            break;
+                        case error.TIMEOUT:
+                            message += "Tiempo de espera agotado.";
+                            break;
+                        default:
+                            message += "Ocurrió un error desconocido.";
+                            break;
+                    }
+                    locationStatus.textContent = message;
+                    locationStatus.className = 'location-error';
+                },
+                { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 } // Opciones para mayor precisión
+            );
+        }
+
 
         function showOrderModal() {
             const inputs = document.querySelectorAll('#menu-donas input[type="number"]');
@@ -313,7 +512,6 @@
             let shippingCostApplied = 0;
             let shippingSummaryHTML = "";
 
-            // CORREGIDO: Envío gratis si la cantidad es MAYOR O IGUAL al umbral
             if (totalQuantity < FREE_SHIPPING_THRESHOLD) { 
                 shippingCostApplied = SHIPPING_COST;
                 shippingSummaryHTML = `<div class="flex justify-between items-center py-1 border-t border-dashed border-gray-300 mt-2 pt-2"><span class="text-gray-600 font-medium">Costo de envío:</span> <span class="font-semibold text-gray-800">$${shippingCostApplied.toFixed(2)}</span></div>`;
@@ -330,6 +528,8 @@
             document.getElementById('order-modal').classList.remove('hidden');
             document.getElementById('order-modal').classList.add('flex');
             addressInput.value = ''; 
+            locationStatus.textContent = ''; // Limpiar estado de ubicación
+            locationStatus.className = '';
             addressError.classList.add('hidden'); 
             updateWhatsappButtonState(); 
         }
@@ -373,7 +573,6 @@
             messageParts.push(`\n\nSubtotal productos: $${itemsTotalPrice.toFixed(2)} MXN`);
 
             let shippingCostApplied = 0;
-            // CORREGIDO: Envío gratis si la cantidad es MAYOR O IGUAL al umbral
             if (totalQuantity < FREE_SHIPPING_THRESHOLD) { 
                 shippingCostApplied = SHIPPING_COST;
                 messageParts.push(`\nCosto de envío: $${shippingCostApplied.toFixed(2)} MXN`);
@@ -384,7 +583,7 @@
             const finalTotalPrice = itemsTotalPrice + shippingCostApplied;
 
             messageParts.push(`\n\nTotal FINAL: $${finalTotalPrice.toFixed(2)} MXN`);
-            messageParts.push(`\nDirección de envío: ${address}`);
+            messageParts.push(`\nDirección de envío: ${address}`); // Aquí ya va la dirección o el link de Google Maps
             messageParts.push(`\n\n¡Muchas gracias! 😊`);
             
             const finalMessage = messageParts.join(""); 
@@ -394,6 +593,210 @@
             window.open(whatsappUrl, '_blank');
         }
 
+        // --- Funciones para Sugerencia de Combinación de Donas con Gemini ---
+        function showSuggestionModal() {
+            suggestionModal.classList.remove('hidden');
+            suggestionModal.classList.add('flex');
+            suggestionContent.innerHTML = ''; 
+            suggestionError.classList.add('hidden');
+            addSuggestionButton.classList.add('hidden');
+            suggestionLoading.classList.remove('hidden');
+        }
+
+        function closeSuggestionModal() {
+            suggestionModal.classList.add('hidden');
+            suggestionModal.classList.remove('flex');
+            currentSuggestion = null; 
+        }
+        
+        async function getDonutSuggestion() {
+            showSuggestionModal();
+            currentSuggestion = null; 
+
+            const donutListForPrompt = availableDonuts.map(d => `${d.name} ($${d.price})`).join(", ");
+            const prompt = `Eres un asistente experto en donas para la pastelería 'Dulces Antojos'. Tenemos estas donas: ${donutListForPrompt}.
+Por favor, sugiere una combinación de 3 o 4 donas diferentes que sea deliciosa y equilibrada. Para tu sugerencia, proporciona:
+1. Una lista de los nombres exactos de las donas sugeridas.
+2. Un nombre creativo y corto para esta combinación sugerida (máximo 5 palabras).
+3. Una breve y apetitosa descripción de por qué esta combinación es especial (máximo 30 palabras).
+
+Responde SOLAMENTE en formato JSON con la siguiente estructura:
+{
+  "nombreCombinacion": "Nombre Creativo de la Combinación",
+  "descripcionCombinacion": "Descripción apetitosa.",
+  "donasSugeridas": [
+    {"nombre": "Nombre Exacto Dona 1", "cantidad": 1},
+    {"nombre": "Nombre Exacto Dona 2", "cantidad": 1},
+    {"nombre": "Nombre Exacto Dona 3", "cantidad": 1}
+  ]
+}
+Asegúrate que los nombres de las donas en 'donasSugeridas' coincidan exactamente con los nombres de nuestra lista (${availableDonuts.map(d => `'${d.name}'`).join(", ")}).`;
+
+            const apiKey = ""; 
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+            
+            const payload = {
+                contents: [{ role: "user", parts: [{ text: prompt }] }],
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            "nombreCombinacion": { "type": "STRING" },
+                            "descripcionCombinacion": { "type": "STRING" },
+                            "donasSugeridas": {
+                                "type": "ARRAY",
+                                "items": {
+                                    "type": "OBJECT",
+                                    "properties": {
+                                        "nombre": { "type": "STRING" },
+                                        "cantidad": { "type": "NUMBER" }
+                                    },
+                                    "required": ["nombre", "cantidad"]
+                                }
+                            }
+                        },
+                        "required": ["nombreCombinacion", "descripcionCombinacion", "donasSugeridas"]
+                    }
+                }
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorBody = await response.text();
+                    console.error("Error en la respuesta de la API (sugerencia):", response.status, errorBody);
+                    throw new Error(`Error de la API: ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    
+                    const rawJsonText = result.candidates[0].content.parts[0].text;
+                    const suggestionData = JSON.parse(rawJsonText); 
+                    currentSuggestion = suggestionData; 
+
+                    let suggestionHTML = `<h4 class="font-heading text-3xl text-orange-600 mb-3">${suggestionData.nombreCombinacion}</h4>`;
+                    suggestionHTML += `<p class="mb-4 italic">"${suggestionData.descripcionCombinacion}"</p>`;
+                    suggestionHTML += `<p class="font-semibold mb-2">Esta combinación incluye:</p><ul class="list-disc list-inside mb-4">`;
+                    suggestionData.donasSugeridas.forEach(dona => {
+                        suggestionHTML += `<li>${dona.cantidad} x ${dona.nombre}</li>`;
+                    });
+                    suggestionHTML += `</ul>`;
+                    
+                    suggestionContent.innerHTML = suggestionHTML;
+                    addSuggestionButton.classList.remove('hidden');
+                    suggestionError.classList.add('hidden');
+                } else {
+                    console.error("Respuesta inesperada de la API de Gemini (sugerencia):", result);
+                    throw new Error("No se pudo obtener una sugerencia válida.");
+                }
+            } catch (error) {
+                console.error("Error al obtener sugerencia de donas:", error);
+                suggestionContent.innerHTML = '';
+                suggestionError.classList.remove('hidden');
+                addSuggestionButton.classList.add('hidden');
+            } finally {
+                suggestionLoading.classList.add('hidden');
+            }
+        }
+
+        function addSuggestionToOrder() {
+            if (!currentSuggestion || !currentSuggestion.donasSugeridas) return;
+            
+            availableDonuts.forEach(donaInfo => {
+                const inputElement = document.getElementById(donaInfo.id);
+                if (inputElement) {
+                    inputElement.value = 0; 
+                }
+            });
+            
+            currentSuggestion.donasSugeridas.forEach(suggestedDona => {
+                const donaInfo = availableDonuts.find(d => d.name === suggestedDona.nombre);
+                if (donaInfo) {
+                    const inputElement = document.getElementById(donaInfo.id);
+                    if (inputElement) {
+                        inputElement.value = (parseInt(inputElement.value) || 0) + suggestedDona.cantidad; 
+                    }
+                }
+            });
+            updateOrderButtonState(); 
+            closeSuggestionModal();
+        }
+
+        // --- Funciones para Personalidad de Dona con Gemini ---
+        function showDonutPersonalityModal(donutName) {
+            donutPersonalityModal.classList.remove('hidden');
+            donutPersonalityModal.classList.add('flex');
+            donutPersonalityTitle.textContent = `Personalidad de: ${donutName}`;
+            donutPersonalityContent.innerHTML = '';
+            donutPersonalityError.classList.add('hidden');
+            donutPersonalityLoading.classList.remove('hidden');
+        }
+
+        function closeDonutPersonalityModal() {
+            donutPersonalityModal.classList.add('hidden');
+            donutPersonalityModal.classList.remove('flex');
+        }
+
+        async function getDonutPersonality(donutName, donutDescription) {
+            showDonutPersonalityModal(donutName);
+
+            const prompt = `Eres un creativo escritor de personalidades para 'Dulces Antojos', nuestra adorable pastelería. Para la dona llamada '${donutName}', cuya descripción es '${donutDescription}', por favor crea una breve y divertida 'personalidad' o una mini-historia (máximo 50-70 palabras). Hazla única, encantadora y que den ganas de probar la dona. Evita usar listas, solo texto narrativo.`;
+            
+            const apiKey = ""; 
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ role: "user", parts: [{ text: prompt }] }]
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorBody = await response.text();
+                    console.error("Error en la respuesta de la API (personalidad):", response.status, errorBody);
+                    throw new Error(`Error de la API: ${response.status}`);
+                }
+                
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    
+                    const personalityText = result.candidates[0].content.parts[0].text;
+                    donutPersonalityContent.innerHTML = `<p>${personalityText.replace(/\n/g, '<br>')}</p>`; 
+                    donutPersonalityError.classList.add('hidden');
+                } else {
+                     console.error("Respuesta inesperada de la API de Gemini (personalidad):", result);
+                    throw new Error("No se pudo obtener la personalidad de la dona.");
+                }
+
+            } catch (error) {
+                console.error("Error al obtener personalidad de la dona:", error);
+                donutPersonalityContent.innerHTML = '';
+                donutPersonalityError.classList.remove('hidden');
+            } finally {
+                donutPersonalityLoading.classList.add('hidden');
+            }
+        }
+
+
+        // --- Event Listeners ---
         document.addEventListener('DOMContentLoaded', () => {
             updateOrderButtonState();
             const quantityInputs = document.querySelectorAll('#menu-donas input[type="number"]');
@@ -411,6 +814,10 @@
                     }
                 });
             });
+
+            if(addSuggestionButton) {
+                addSuggestionButton.addEventListener('click', addSuggestionToOrder);
+            }
         });
     </script>
 </body>
