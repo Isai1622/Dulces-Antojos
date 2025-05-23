@@ -36,18 +36,15 @@
         .donut-card:hover img {
             transform: scale(1.05);
         }
-        .btn { /* Clase base para botones */
-            font-weight: 700;
-            padding: 0.9rem 2rem;
-            border-radius: 0.75rem;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            letter-spacing: 0.5px;
-            text-align: center;
-        }
         .btn-primary {
             background-color: #E57373; /* Un rosa-coral suave */
             color: white;
+            font-weight: 700; /* Un poco más de peso */
+            padding: 0.9rem 2rem;
+            border-radius: 0.75rem;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
             box-shadow: 0 5px 10px rgba(229, 115, 115, 0.3);
+            letter-spacing: 0.5px;
         }
         .btn-primary:hover {
             background-color: #EF5350; /* Rosa-coral más intenso */
@@ -63,6 +60,10 @@
         .btn-secondary {
             background-color: #A5D6A7; /* Verde menta pastel */
             color: #388E3C; /* Verde oscuro para contraste */
+            font-weight: 700;
+            padding: 0.9rem 2rem;
+            border-radius: 0.75rem;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
             box-shadow: 0 5px 10px rgba(165, 214, 167, 0.4);
         }
         .btn-secondary:hover {
@@ -78,21 +79,13 @@
             cursor: not-allowed;
             opacity: 0.6;
         }
-        .btn-accent { /* Botón para la función de Gemini */
-            background-color: #FFB74D; /* Naranja pastel */
-            color: #A1887F; /* Marrón */
-            box-shadow: 0 5px 10px rgba(255, 183, 77, 0.3);
-        }
-        .btn-accent:hover {
-            background-color: #FFA726; /* Naranja más intenso */
-            color: #795548;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(255, 167, 38, 0.35);
-        }
         .btn-cancel {
             background-color: #F0F0F0; /* Gris muy claro */
             color: #757575; /* Gris medio */
-            font-weight: 600; /* Ajustar peso si es necesario, heredado de .btn */
+            font-weight: 600;
+            padding: 0.9rem 2rem;
+            border-radius: 0.75rem;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
              box-shadow: 0 4px 6px rgba(0,0,0,0.08);
         }
         .btn-cancel:hover {
@@ -102,13 +95,13 @@
             box-shadow: 0 6px 10px rgba(0,0,0,0.1);
         }
         .modal {
-            background-color: rgba(79, 53, 45, 0.6); 
+            background-color: rgba(79, 53, 45, 0.6); /* Fondo del modal un poco más oscuro y cálido */
         }
         .modal-content {
-            animation: fadeInScale 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
-            background-color: #FFFBF2; 
+            animation: fadeInScale 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Animación más suave */
+            background-color: #FFFBF2; /* Fondo del modal crema muy claro */
             border-radius: 1.25rem;
-            border: 2px solid #E57373; 
+            border: 2px solid #E57373; /* Borde con color primario */
         }
         @keyframes fadeInScale {
             from { opacity: 0; transform: translateY(20px) scale(0.95); }
@@ -117,63 +110,48 @@
         .quantity-input {
             width: 5rem;
             text-align: center;
-            border: 2px solid #FFB74D; 
+            border: 2px solid #FFB74D; /* Borde naranja más vibrante */
             border-radius: 0.5rem;
-            color: #D84315; 
+            color: #D84315; /* Texto naranja oscuro intenso */
             font-weight: 700;
             padding: 0.5rem;
         }
         .stock-info {
-            background-color: #FFCC80; 
-            color: #A1887F; 
+            background-color: #FFCC80; /* Naranja pastel más claro */
+            color: #A1887F; /* Marrón grisáceo */
             padding: 0.6rem 1.2rem;
-            border-radius: 2rem; 
+            border-radius: 2rem; /* Más redondeado, como una etiqueta */
             font-weight: 600;
             display: inline-block;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .shipping-info {
-            background-color: #E1F5FE; 
-            color: #0277BD; 
+            background-color: #E1F5FE; /* Azul cielo muy pálido */
+            color: #0277BD; /* Azul oscuro */
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem;
             font-weight: 600;
             display: inline-block;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            border: 1px dashed #4FC3F7; 
+            border: 1px dashed #4FC3F7; /* Borde punteado azul claro */
         }
         .brand-accent {
-            color: #E57373; 
+            color: #E57373; /* Color primario para acentos */
         }
         .price-tag {
-            color: #4CAF50; 
+            color: #4CAF50; /* Verde brillante para precios */
             font-weight: 700;
         }
         .donut-title {
              font-family: 'Satisfy', cursive;
-             color: #D81B60; 
-        }
-        /* Estilos para el modal de sugerencia */
-        #suggestion-loading {
-            /* Simple spinner */
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #E57373;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+             color: #D81B60; /* Un rosa más intenso para títulos de donas */
         }
     </style>
 </head>
 <body class="antialiased">
     <div class="container mx-auto p-4 md:p-8 max-w-5xl">
 
-        <header class="text-center mb-12"> <h1 class="font-script text-6xl md:text-7xl font-bold text-pink-600 mb-4">Dulces Antojos</h1>
+        <header class="text-center mb-20"> <h1 class="font-script text-6xl md:text-7xl font-bold text-pink-600 mb-4">Dulces Antojos</h1>
             <p class="text-2xl text-orange-700 mb-5">¡Donas <span class="font-heading text-3xl brand-accent">recién hechas</span> con amor, directo a tu paladar!</p>
             <p class="text-lg text-gray-700">
                 Horario de Pedidos: <span class="font-semibold brand-accent">Domingos desde las 8:00 AM</span>
@@ -183,19 +161,12 @@
             </p>
             <p class="shipping-info mt-5 text-md">
                 ✨ ¡Envío <span class="text-green-600 font-bold">GRATIS</span> en pedidos de 10 donas o más! ✨<br>
-                <span class="text-sm">(En pedidos menor a 10 donas, el envío tiene un costo de $50.00 MXN)</span>
+                <span class="text-sm">(En pedidos de menos de 10 donas, el envío tiene un costo de $50.00 MXN)</span>
             </p>
         </header>
 
-        <div class="text-center mb-12">
-            <button id="show-suggestion-button" class="btn btn-accent text-lg px-8 py-3" onclick="getDonutSuggestion()">
-                ✨ ¿Antojo indeciso? ¡Recibe una sugerencia! ✨
-            </button>
-        </div>
-
         <section id="menu-donas" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-10 gap-y-12 mb-20">
-            <div class="donut-card p-0 flex flex-col"> 
-                <img src="https://i.postimg.cc/6qRXypPc/dona-blanca.jpg" alt="Dona de Chocolate Blanco Celestial" class="w-full h-64 object-cover">
+            <div class="donut-card p-0 flex flex-col"> <img src="https://i.postimg.cc/6qRXypPc/dona-blanca.jpg" alt="Dona de Chocolate Blanco Celestial" class="w-full h-64 object-cover">
                 <div class="p-6 flex flex-col flex-grow">
                     <h2 class="text-4xl donut-title mb-3">Chocolate Blanco Celestial</h2>
                     <p class="text-gray-600 text-sm mb-4 flex-grow">
@@ -252,7 +223,7 @@
         </section>
 
         <div class="text-center mb-20">
-            <button id="order-button" class="btn btn-primary text-xl px-12 py-5 disabled:opacity-50 disabled:cursor-not-allowed" onclick="showOrderModal()" disabled>
+            <button id="order-button" class="btn-primary text-xl px-12 py-5 disabled:opacity-50 disabled:cursor-not-allowed" onclick="showOrderModal()" disabled>
                 Revisar y Confirmar Pedido
             </button>
         </div>
@@ -273,63 +244,27 @@
                 </div>
                 
                 <div class="flex flex-col sm:flex-row gap-4 mt-10">
-                    <button id="whatsapp-button" class="btn btn-secondary w-full sm:w-auto flex-grow text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center" onclick="sendWhatsAppMessage()" disabled>
+                    <button id="whatsapp-button" class="btn-secondary w-full sm:w-auto flex-grow text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center" onclick="sendWhatsAppMessage()" disabled>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 inline mr-2 -mt-1">
                             <path d="M16.668 14.9195C16.4232 15.4342 15.3592 15.989 14.8444 16.1295C14.3296 16.27 13.6804 16.3305 13.2516 16.19C12.8228 16.0495 12.2436 15.8185 11.604 15.4342C10.1492 14.5435 9.0248 13.2005 8.0012 11.7155C7.2084 10.591 6.7104 9.729 6.7708 9.04975C6.8312 8.3705 7.26 7.96075 7.5048 7.716C7.7496 7.47125 8.0244 7.391 8.2692 7.03675C8.514 6.6825 8.5744 6.512 8.484 6.311C8.3936 6.11 8.1788 5.5855 7.9944 5.14075C7.81 4.696 7.6256 4.72625 7.4108 4.72625C7.196 4.72625 6.9512 4.72625 6.7064 4.72625C6.4616 4.72625 6.0928 4.81675 5.7844 5.29175C5.476 5.76675 4.786 6.446 4.786 7.64825C4.786 8.8505 5.81 10.0025 5.9608 10.217C6.1116 10.4315 7.4712 12.6095 9.6792 13.5305C11.5564 14.3022 11.8916 14.5121 12.4968 14.7873C13.102 15.0625 13.6168 15.0322 13.942 14.9717C14.3268 14.9112 15.2908 14.3262 15.5056 13.8115C15.7204 13.2967 15.7204 12.868 15.63 12.707C15.5396 12.546 15.2948 12.4555 15.02 12.2245C14.7452 11.9935 14.2604 11.7925 14.076 11.5172C13.8916 11.242 13.8616 11.011 14.046 10.7965C14.2304 10.582 14.6452 10.1372 15.02 9.783C15.3948 9.42875 15.6396 9.55925 15.8544 9.77375C16.0692 9.98825 16.1296 10.3122 16.22 10.4728C16.3104 10.6332 16.668 11.128 16.8228 11.3425C16.9776 11.557 17.068 11.6777 17.1884 11.6172C17.3088 11.5568 17.7032 11.3425 17.8276 11.037C17.952 10.7315 18.1068 10.4562 18.1672 10.2418C18.2276 10.0272 18.1976 9.84275 18.0772 9.69225C17.9568 9.54175 17.532 9.127 16.668 14.9195Z" />
                         </svg>
                         Enviar Pedido por WhatsApp
                     </button>
-                    <button class="btn btn-cancel w-full sm:w-auto text-lg" onclick="closeOrderModal()">Quizás Luego</button>
+                    <button class="btn-cancel w-full sm:w-auto text-lg" onclick="closeOrderModal()">Quizás Luego</button>
                 </div>
             </div>
         </div>
-
-        <div id="suggestion-modal" class="fixed inset-0 modal items-center justify-center hidden z-50 p-4">
-            <div class="modal-content p-7 md:p-10 shadow-2xl max-w-lg w-full mx-auto">
-                <h3 class="font-heading text-4xl text-pink-500 mb-6 text-center">✨ ¡Sugerencia Especial para Ti! ✨</h3>
-                <div id="suggestion-loading" class="hidden">
-                    </div>
-                <div id="suggestion-content" class="text-gray-700 text-lg">
-                    </div>
-                <div id="suggestion-error" class="text-red-600 text-center hidden mt-4">
-                    <p>¡Ups! No pudimos obtener una sugerencia en este momento. Intenta de nuevo más tarde.</p>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-4 mt-8">
-                    <button id="add-suggestion-button" class="btn btn-secondary w-full sm:w-auto flex-grow text-lg hidden">
-                        Añadir Sugerencia al Pedido
-                    </button>
-                    <button class="btn btn-cancel w-full sm:w-auto" onclick="closeSuggestionModal()">Cerrar</button>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <script>
         const WHATSAPP_NUMBER = "5219841798050"; 
-        const SHIPPING_COST = 50; 
-        const FREE_SHIPPING_THRESHOLD = 10; 
+        const SHIPPING_COST = 50; // Costo de envío en MXN
+        const FREE_SHIPPING_THRESHOLD = 10; // Cantidad de donas para envío gratis (10 o más)
 
         const orderButton = document.getElementById('order-button');
         const whatsappButton = document.getElementById('whatsapp-button');
         const addressInput = document.getElementById('address');
         const addressError = document.getElementById('address-error');
-
-        // Elementos del Modal de Sugerencia
-        const suggestionModal = document.getElementById('suggestion-modal');
-        const suggestionLoading = document.getElementById('suggestion-loading');
-        const suggestionContent = document.getElementById('suggestion-content');
-        const suggestionError = document.getElementById('suggestion-error');
-        const addSuggestionButton = document.getElementById('add-suggestion-button');
-        let currentSuggestion = null; // Para guardar la sugerencia actual
-
-        // Lista de donas disponibles (para el prompt de Gemini y para mapear respuestas)
-        const availableDonuts = [
-            { id: 'qty-blanco', name: 'Chocolate Blanco Celestial', price: 20 },
-            { id: 'qty-negro', name: 'Abrazo de Chocolate Oscuro', price: 20 },
-            { id: 'qty-azucar', name: 'Suspiro Azucarado Clásico', price: 15 },
-            { id: 'qty-rellena', name: 'Corazón de Crema Soñadora', price: 20 }
-        ];
 
         function updateOrderButtonState() {
             const inputs = document.querySelectorAll('#menu-donas input[type="number"]');
@@ -378,6 +313,7 @@
             let shippingCostApplied = 0;
             let shippingSummaryHTML = "";
 
+            // CORREGIDO: Envío gratis si la cantidad es MAYOR O IGUAL al umbral
             if (totalQuantity < FREE_SHIPPING_THRESHOLD) { 
                 shippingCostApplied = SHIPPING_COST;
                 shippingSummaryHTML = `<div class="flex justify-between items-center py-1 border-t border-dashed border-gray-300 mt-2 pt-2"><span class="text-gray-600 font-medium">Costo de envío:</span> <span class="font-semibold text-gray-800">$${shippingCostApplied.toFixed(2)}</span></div>`;
@@ -437,6 +373,7 @@
             messageParts.push(`\n\nSubtotal productos: $${itemsTotalPrice.toFixed(2)} MXN`);
 
             let shippingCostApplied = 0;
+            // CORREGIDO: Envío gratis si la cantidad es MAYOR O IGUAL al umbral
             if (totalQuantity < FREE_SHIPPING_THRESHOLD) { 
                 shippingCostApplied = SHIPPING_COST;
                 messageParts.push(`\nCosto de envío: $${shippingCostApplied.toFixed(2)} MXN`);
@@ -457,154 +394,6 @@
             window.open(whatsappUrl, '_blank');
         }
 
-        // --- Funciones para Sugerencia de Donas con Gemini ---
-        function showSuggestionModal() {
-            suggestionModal.classList.remove('hidden');
-            suggestionModal.classList.add('flex');
-            suggestionContent.innerHTML = ''; // Limpiar contenido anterior
-            suggestionError.classList.add('hidden');
-            addSuggestionButton.classList.add('hidden');
-            suggestionLoading.classList.remove('hidden');
-        }
-
-        function closeSuggestionModal() {
-            suggestionModal.classList.add('hidden');
-            suggestionModal.classList.remove('flex');
-            currentSuggestion = null; // Limpiar sugerencia guardada
-        }
-        
-        async function getDonutSuggestion() {
-            showSuggestionModal();
-            currentSuggestion = null; // Resetear sugerencia
-
-            const donutListForPrompt = availableDonuts.map(d => `${d.name} ($${d.price})`).join(", ");
-            const prompt = `Eres un asistente experto en donas para la pastelería 'Dulces Antojos'. Tenemos estas donas: ${donutListForPrompt}.
-Por favor, sugiere una combinación de 3 o 4 donas diferentes que sea deliciosa y equilibrada. Para tu sugerencia, proporciona:
-1. Una lista de los nombres exactos de las donas sugeridas.
-2. Un nombre creativo y corto para esta combinación sugerida (máximo 5 palabras).
-3. Una breve y apetitosa descripción de por qué esta combinación es especial (máximo 30 palabras).
-
-Responde SOLAMENTE en formato JSON con la siguiente estructura:
-{
-  "nombreCombinacion": "Nombre Creativo de la Combinación",
-  "descripcionCombinacion": "Descripción apetitosa.",
-  "donasSugeridas": [
-    {"nombre": "Nombre Exacto Dona 1", "cantidad": 1},
-    {"nombre": "Nombre Exacto Dona 2", "cantidad": 1},
-    {"nombre": "Nombre Exacto Dona 3", "cantidad": 1}
-  ]
-}
-Asegúrate que los nombres de las donas en 'donasSugeridas' coincidan exactamente con los nombres de nuestra lista (${availableDonuts.map(d => `'${d.name}'`).join(", ")}).`;
-
-            const apiKey = ""; // La API Key será inyectada por el entorno de Canvas
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-            
-            const payload = {
-                contents: [{ role: "user", parts: [{ text: prompt }] }],
-                generationConfig: {
-                    responseMimeType: "application/json",
-                    responseSchema: {
-                        type: "OBJECT",
-                        properties: {
-                            "nombreCombinacion": { "type": "STRING" },
-                            "descripcionCombinacion": { "type": "STRING" },
-                            "donasSugeridas": {
-                                "type": "ARRAY",
-                                "items": {
-                                    "type": "OBJECT",
-                                    "properties": {
-                                        "nombre": { "type": "STRING" },
-                                        "cantidad": { "type": "NUMBER" }
-                                    },
-                                    "required": ["nombre", "cantidad"]
-                                }
-                            }
-                        },
-                        "required": ["nombreCombinacion", "descripcionCombinacion", "donasSugeridas"]
-                    }
-                }
-            };
-
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                if (!response.ok) {
-                    const errorBody = await response.text();
-                    console.error("Error en la respuesta de la API:", response.status, errorBody);
-                    throw new Error(`Error de la API: ${response.status}`);
-                }
-
-                const result = await response.json();
-                
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    
-                    const rawJsonText = result.candidates[0].content.parts[0].text;
-                    const suggestionData = JSON.parse(rawJsonText); // Gemini ya devuelve JSON parseable con responseSchema
-                    currentSuggestion = suggestionData; // Guardar la sugerencia
-
-                    let suggestionHTML = `<h4 class="font-heading text-3xl text-orange-600 mb-3">${suggestionData.nombreCombinacion}</h4>`;
-                    suggestionHTML += `<p class="mb-4 italic">"${suggestionData.descripcionCombinacion}"</p>`;
-                    suggestionHTML += `<p class="font-semibold mb-2">Esta combinación incluye:</p><ul class="list-disc list-inside mb-4">`;
-                    suggestionData.donasSugeridas.forEach(dona => {
-                        suggestionHTML += `<li>${dona.cantidad} x ${dona.nombre}</li>`;
-                    });
-                    suggestionHTML += `</ul>`;
-                    
-                    suggestionContent.innerHTML = suggestionHTML;
-                    addSuggestionButton.classList.remove('hidden');
-                    suggestionError.classList.add('hidden');
-                } else {
-                    console.error("Respuesta inesperada de la API de Gemini:", result);
-                    throw new Error("No se pudo obtener una sugerencia válida.");
-                }
-            } catch (error) {
-                console.error("Error al obtener sugerencia de donas:", error);
-                suggestionContent.innerHTML = '';
-                suggestionError.classList.remove('hidden');
-                addSuggestionButton.classList.add('hidden');
-            } finally {
-                suggestionLoading.classList.add('hidden');
-            }
-        }
-
-        function addSuggestionToOrder() {
-            if (!currentSuggestion || !currentSuggestion.donasSugeridas) return;
-
-            // Primero, resetear todas las cantidades a 0 para no sumar a pedidos existentes con este botón.
-            // Opcional: se podría sumar si se prefiere. Por ahora, reemplaza.
-            availableDonuts.forEach(donaInfo => {
-                const inputElement = document.getElementById(donaInfo.id);
-                if (inputElement) {
-                    inputElement.value = 0;
-                }
-            });
-            
-            currentSuggestion.donasSugeridas.forEach(suggestedDona => {
-                const donaInfo = availableDonuts.find(d => d.name === suggestedDona.nombre);
-                if (donaInfo) {
-                    const inputElement = document.getElementById(donaInfo.id);
-                    if (inputElement) {
-                        // Sumar la cantidad sugerida al valor actual, o establecerla si se prefiere.
-                        // Por ahora, establecemos la cantidad sugerida.
-                        inputElement.value = parseInt(inputElement.value) + suggestedDona.cantidad; 
-                    }
-                }
-            });
-            updateOrderButtonState(); // Actualizar el estado del botón de pedido principal
-            closeSuggestionModal();
-            // Opcional: Mostrar un mensaje de que la sugerencia fue añadida.
-            // Por ejemplo, un pequeño toast o notificación.
-            // alert("¡Sugerencia añadida a tu pedido!"); // Evitar alerts, usar UI no intrusiva
-        }
-
-
-        // --- Event Listeners ---
         document.addEventListener('DOMContentLoaded', () => {
             updateOrderButtonState();
             const quantityInputs = document.querySelectorAll('#menu-donas input[type="number"]');
@@ -622,11 +411,6 @@ Asegúrate que los nombres de las donas en 'donasSugeridas' coincidan exactament
                     }
                 });
             });
-
-            // Event listener para el botón de añadir sugerencia
-            if(addSuggestionButton) {
-                addSuggestionButton.addEventListener('click', addSuggestionToOrder);
-            }
         });
     </script>
 </body>
